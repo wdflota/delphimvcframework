@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{0841B4A4-B2D2-48D4-BED6-7D841942AEB2}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="..\articles_crud_server_nullabletypes\articles_crud_nullabletypes.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="articles_crud_vcl_client_nullabletypes.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="articles_crud_nullabletypes">
+        <MSBuild Projects="..\articles_crud_server_nullabletypes\articles_crud_nullabletypes.dproj"/>
+    </Target>
+    <Target Name="articles_crud_nullabletypes:Clean">
+        <MSBuild Projects="..\articles_crud_server_nullabletypes\articles_crud_nullabletypes.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="articles_crud_nullabletypes:Make">
+        <MSBuild Projects="..\articles_crud_server_nullabletypes\articles_crud_nullabletypes.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="articles_crud_vcl_client_nullabletypes">
+        <MSBuild Projects="articles_crud_vcl_client_nullabletypes.dproj"/>
+    </Target>
+    <Target Name="articles_crud_vcl_client_nullabletypes:Clean">
+        <MSBuild Projects="articles_crud_vcl_client_nullabletypes.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="articles_crud_vcl_client_nullabletypes:Make">
+        <MSBuild Projects="articles_crud_vcl_client_nullabletypes.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="articles_crud_nullabletypes;articles_crud_vcl_client_nullabletypes"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="articles_crud_nullabletypes:Clean;articles_crud_vcl_client_nullabletypes:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="articles_crud_nullabletypes:Make;articles_crud_vcl_client_nullabletypes:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
