@@ -1,3 +1,7 @@
+Soon I will be publishing videos about the handling of additions and modifications made.
+by William dFlota.
+
+
 ![DelphiMVCFramework Logo](docs/dmvcframework_logofacebook.png)
 
 # DelphiMVCFramework 3.1.0-lithium is [here](https://github.com/danieleteti/delphimvcframework/releases/tag/v3.1.0-lithium)!
