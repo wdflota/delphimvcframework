@@ -39,12 +39,14 @@ type
   /// <summary>Alias for nullables types of Spring</summary>
   TNullableInteger = Spring.TNullableInteger;
   TNullableInt64 = Spring.TNullableInt64;
+  TNullableDouble = Spring.TNullableDouble;
   TNullableCurrency = Spring.TNullableCurrency;
   TNullableString = Spring.TNullableString;
   TNullableDateTime = Spring.TNullableDateTime;
   TNullableDate = Spring.Nullable<TDate>;
   TNullableTime = Spring.Nullable<TTime>;
   TNullableGuid = Spring.TNullableGuid;
+  TNullableBoolean = Spring.TNullableBoolean;
 
 implementation
 
